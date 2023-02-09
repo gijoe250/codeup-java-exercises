@@ -6,7 +6,6 @@ import static java.lang.Integer.parseInt;
 public class ConsoleExercises {
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
-        in.useDelimiter("\n");
 
         double pi = 3.14159;
 
@@ -51,9 +50,18 @@ public class ConsoleExercises {
         System.out.println("Enter width and length of room: ");
         int width = in.nextInt();
         int length = in.nextInt();
-        System.out.printf("The width is %d and the length is %d \n", width, length );
+        System.out.printf("The width is %s and the length is %s \n", width, length );
         int area = width * length;
         int parameter = 2 * width + 2 * length;
         System.out.printf("The area is %d and the parameter is %d \n", area, parameter);
+
+//        String input = in.nextLine();
+//
+//        System.out.println(input + " here\n");
+//
+//        in.useDelimiter("n");
+//        System.out.println(in.next() + "test");      // prints: red
+//        System.out.println(in.next() + "what");      // prints: blue
+
     }
 }
