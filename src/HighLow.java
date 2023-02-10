@@ -1,5 +1,8 @@
+import java.util.Random;
+import java.util.Scanner;
+
 public class HighLow {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 //        The specs for the game are:
 //
 //        Game picks a random number between 1 and 100.
@@ -15,5 +18,37 @@ public class HighLow {
 //
 //        Keep track of how many guesses a user makes.
 //                Set an upper limit on the number of guesses.
-//    }
+        System.out.println("Guess the number between 1 - 100 Mr. User. You have 6 guesses.");
+        Scanner in = new Scanner(System.in);
+        int guess = in.nextInt();
+        int answer = randomNumber(100) + 1;
+        int guesses = 0;
+
+        while(answer != guess && guesses < 6){
+            if (guess > answer){
+                System.out.println("Guess lower");
+                guess = in.nextInt();
+                guesses++;
+                continue;
+            }
+            if(guess < answer){
+                System.out.println("Guess higher");
+                guess = in.nextInt();
+                guesses++;
+            }
+        }
+        if ( guesses < 6){
+            System.out.println("Congratulations! you are correct!");
+            System.out.printf("It took you %d guess to get the answer right", guesses);
+        }
+        else {
+            System.out.println("You ran out of guesses");
+        }
+
+    }
+        public static int randomNumber ( int sides){
+            Random rand = new Random();
+
+            return rand.nextInt(sides) + 1;
+        }
 }

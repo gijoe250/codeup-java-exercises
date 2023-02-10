@@ -15,8 +15,9 @@ public class MethodsExercises {
 //        System.out.print("Enter a number between 1 and 10: ");
 //        int userInputRecursion = getIntegerRecursion(1, 10);
 //        System.out.println(userInputRecursion + " is within range");
-//        factorial(1,10);
+        factorial(1,10);
         rollDice();
+//        factorialRecursion(1, 10);
 
 
     }
@@ -157,9 +158,7 @@ public class MethodsExercises {
     public static int randomNumber(int sides){
         Random rand = new Random();
 
-        int upperbound = sides;
-
-        return rand.nextInt(upperbound) + 1;
+        return rand.nextInt(sides) + 1;
     }
 
 //    Create an application that simulates dice rolling.
