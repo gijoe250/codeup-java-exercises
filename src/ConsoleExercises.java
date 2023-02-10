@@ -39,21 +39,21 @@ public class ConsoleExercises {
 //        int parameter = 2 * width + 2 * length;
 //        System.out.printf("The area is %d and the parameter is %d \n", area, parameter);
 
-//        System.out.println("Enter width and length of room: ");
-//        double width = parseDouble(in.nextLine());
-//        double length = parseDouble(in.nextLine());
-//        System.out.printf("The width is %.2f and the length is %.2f \n", width, length );
-//        double area = width * length;
-//        double parameter = 2 * width + 2 * length;
-//        System.out.printf("The area is %.2f and the parameter is %.2f \n", area, parameter);
-
         System.out.println("Enter width and length of room: ");
-        int width = in.nextInt();
-        int length = in.nextInt();
-        System.out.printf("The width is %s and the length is %s \n", width, length );
-        int area = width * length;
-        int parameter = 2 * width + 2 * length;
-        System.out.printf("The area is %d and the parameter is %d \n", area, parameter);
+        double width = parseDouble(in.nextLine());
+        double length = parseDouble(in.nextLine());
+        System.out.printf("The width is %.2f and the length is %.2f \n", width, length );
+        double area = width * length;
+        double parameter = 2 * width + 2 * length;
+        System.out.printf("The area is %.2f and the parameter is %.2f \n", area, parameter);
+
+//        System.out.println("Enter width and length of room: ");
+//        int width = in.nextInt();
+//        int length = in.nextInt();
+//        System.out.printf("The width is %s and the length is %s \n", width, length );
+//        int area = width * length;
+//        int parameter = 2 * width + 2 * length;
+//        System.out.printf("The area is %d and the parameter is %d \n", area, parameter);
 
 //        String input = in.nextLine();
 //
