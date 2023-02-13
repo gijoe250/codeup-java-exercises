@@ -15,11 +15,12 @@ public class MethodsExercises {
 //        System.out.print("Enter a number between 1 and 10: ");
 //        int userInputRecursion = getIntegerRecursion(1, 10);
 //        System.out.println(userInputRecursion + " is within range");
-        factorial(1,10);
-        rollDice();
-//        factorialRecursion(1, 10);
-
-
+//        factorial(1,10);
+//        rollDice();
+        System.out.println("Enter a number to factorial recurse");
+        Scanner in = new Scanner(System.in);
+        int userInput = in.nextInt();
+        System.out.println(factorialRecursion(userInput));
     }
     public static int addition(int number1, int number2) {
         return number1 + number2;
@@ -136,6 +137,14 @@ public class MethodsExercises {
         }
     }
 
+    public static int factorialRecursion(int mathMe){
+        System.out.println(mathMe);
+        if (mathMe == 1){
+            return 1;
+        }
+        return factorialRecursion(mathMe-1) * mathMe;
+    }
+
     public static void rollDice(){
         Scanner in = new Scanner(System.in);
         System.out.println("Enter the number of sides for the dice");
@@ -161,11 +170,4 @@ public class MethodsExercises {
         return rand.nextInt(sides) + 1;
     }
 
-//    Create an application that simulates dice rolling.
-//
-//    Ask the user to enter the number of sides for a pair of dice.
-//    Prompt the user to roll the dice.
-//      "Roll" two n-sided dice, display the results of each, and then ask the user if he/she wants to roll the dice again.
-//            Use static methods to implement the method(s) that generate the random numbers.
-//    Use the .random method of the java.lang.Math class to generate random numbers.
 }
