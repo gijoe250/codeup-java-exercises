@@ -21,6 +21,8 @@ public class MethodsExercises {
         Scanner in = new Scanner(System.in);
         int userInput = in.nextInt();
         System.out.println(factorialRecursion(userInput));
+        sayName("test");
+        sayName("tester", "testing");
     }
     public static int addition(int number1, int number2) {
         return number1 + number2;
@@ -49,7 +51,42 @@ public class MethodsExercises {
         return number1/number2;
     }
 
-    //    Create a method that validates that user input is in a certain range and returns that input as an integer if it is within the given range.
+    public static double addition(double number1, double number2) {
+        return number1 + number2;
+    }
+
+    public static double subtraction(double number1, double number2) {
+        return number1 - number2;
+    }
+
+    public static double multiplication(double number1, double number2) {
+        double answer = 0;
+
+        for(int i=0; i < number2; i++){
+            answer = answer + number1;
+        }
+        return answer;
+    }
+
+    public static double multiplicationRecursion(double number1, double number2) {
+        if( number2 == 1)
+            return number1;
+        return number1 + multiplicationRecursion(number1, number2 - 1);
+    }
+
+    public static double division(double number1, double number2) {
+        return number1/number2;
+    }
+
+    public static void sayName(String name){
+        System.out.println(name);
+    }
+
+    public static void sayName(String name1, String name2){
+        System.out.println(name1 + " " + name2);
+    }
+
+//    Create a method that validates that user input is in a certain range and returns that input as an integer if it is within the given range.
 //    If not, prompt the user to input their number again until the input is within range.
 //    If the input is invalid, prompt the user again.
 //    Hint: recursion might be helpful here!
@@ -138,7 +175,6 @@ public class MethodsExercises {
     }
 
     public static int factorialRecursion(int mathMe){
-        System.out.println(mathMe);
         if (mathMe == 1){
             return 1;
         }
