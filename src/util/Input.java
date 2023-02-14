@@ -9,11 +9,11 @@ public class Input {
         scan = new Scanner(System.in);
     }
 
-    public static String getString(){
+    public String getString(){
         System.out.println("Enter a string");
         return scan.next();
     }
-    public static boolean yesNo(String answer){
+    public boolean yesNo(String answer){
         return answer.toLowerCase().equals("y") || answer.toLowerCase().equals("yes");
     }
     int getInt(int min, int max){
