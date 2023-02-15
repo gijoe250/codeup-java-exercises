@@ -10,18 +10,25 @@ public class Input {
     }
 
     public String getString(){
-        System.out.println("Enter a string");
+        System.out.println("Enter a string: ");
         return scan.next();
     }
-    public boolean yesNo(String answer){
+    public String getString(String prompt){
+        System.out.println(prompt);
+        System.out.println("Enter a string: ");
+        return scan.next();
+    }
+    public boolean yesNo(){
+        System.out.println("Enter yes or y if you want to continue creating circles");
+        String answer = scan.next();
         return answer.toLowerCase().equals("y") || answer.toLowerCase().equals("yes");
     }
     int getInt(int min, int max){
-        System.out.format("Enter an integer between %d and %d",min, max);
+        System.out.format("Enter an integer between %d and %d: ",min, max);
         int value = getInt();
 
         while (value < min || value > max){
-            System.out.println("Integer not within range. Enter a new integer");
+            System.out.println("Integer not within range. Enter a new integer: ");
             value = getInt();
         }
         return value;
@@ -29,17 +36,40 @@ public class Input {
     int getInt(){
         return scan.nextInt();
     }
-    double getDouble(double min, double max){
-        System.out.format("Enter a double between %f and %f",min, max);
+    int getInt(int min, int max, String prompt){
+        System.out.println(prompt);
+        System.out.format("Enter an integer between %d and %d: ",min, max);
+        int value = getInt();
+
+        while (value < min || value > max){
+            System.out.println("Integer not within range. Enter a new integer: ");
+            value = getInt();
+        }
+        return value;
+    }
+    public double getDouble(double min, double max){
+        System.out.format("Enter a double between %f and %f: ",min, max);
         double value = getDouble();
 
         while (value < min || value > max){
-            System.out.println("Double not within range. Enter a new Double");
+            System.out.println("Double not within range. Enter a new Double: ");
             value = getDouble();
         }
         return value;
     }
-    double getDouble(){
+    public double getDouble(){
         return scan.nextDouble();
+    }
+
+    public double getDouble(double min, double max, String prompt){
+        System.out.println(prompt);
+        System.out.format("Enter a double between %f and %f: ",min, max);
+        double value = getDouble();
+
+        while (value < min || value > max){
+            System.out.println("Double not within range. Enter a new Double: ");
+            value = getDouble();
+        }
+        return value;
     }
 }
