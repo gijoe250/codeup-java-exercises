@@ -20,6 +20,20 @@ public class Person {
         this.name = name;
     }
 
+    public static Person[] addPerson(Person[] personObjects, Person newPerson){
+        Person[] newPersonObjects = new Person[personObjects.length + 1];
+        int i = 0;
+
+        for (Person person : personObjects){
+            newPersonObjects[i] = new Person(person.getName());
+            i++;
+        }
+        newPersonObjects[2].setName("newName");
+        newPersonObjects[3] = new Person(newPerson.getName());
+
+        return newPersonObjects;
+    }
+
     public static void main(String[] args){
 //        Person person1 = new Person("Billy");
 //        System.out.println(person1.getName());
