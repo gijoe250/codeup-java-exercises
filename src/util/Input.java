@@ -15,11 +15,11 @@ public class Input {
     }
     public String getString(String prompt){
         System.out.println(prompt);
-        System.out.println("Enter a string: ");
-        return scan.next();
+        scan.next();
+        return scan.nextLine();
     }
     public boolean yesNo(){
-        System.out.println("Enter yes or y if you want to continue creating circles");
+        System.out.println("Enter yes or y if you want to continue:");
         String answer = scan.next();
         return answer.toLowerCase().equals("y") || answer.toLowerCase().equals("yes");
     }
@@ -34,6 +34,10 @@ public class Input {
         return value;
     }
     int getInt(){
+        return scan.nextInt();
+    }
+    public int getInt(String prompt){
+        System.out.println(prompt);
         return scan.nextInt();
     }
     int getInt(int min, int max, String prompt){

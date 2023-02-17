@@ -16,9 +16,5 @@ public class ArraysExercises {
         for (Person personObject : newPersonObjects) {
             System.out.println(personObject.getName());
         }
-
-        for (Person personObject : personObjects) {
-            System.out.println(personObject.getName());
-        }
     }
 }

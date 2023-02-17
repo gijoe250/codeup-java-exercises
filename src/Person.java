@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Person {
     private String name;
 
@@ -21,15 +23,9 @@ public class Person {
     }
 
     public static Person[] addPerson(Person[] personObjects, Person newPerson){
-        Person[] newPersonObjects = new Person[personObjects.length + 1];
-        int i = 0;
+        Person[] newPersonObjects = Arrays.copyOf(personObjects, personObjects.length + 1);
 
-        for (Person person : personObjects){
-            newPersonObjects[i] = new Person(person.getName());
-            i++;
-        }
-        newPersonObjects[2].setName("newName");
-        newPersonObjects[3] = new Person(newPerson.getName());
+        newPersonObjects[newPersonObjects.length - 1] = newPerson;
 
         return newPersonObjects;
     }
