@@ -30,6 +30,7 @@ public class Rectangle {
     }
 
     public int getPerimeter(){
+        System.out.println("I am rectangle");
         return (2 * this.length) + (2 * this.width);
     }
 }
