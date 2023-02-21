@@ -1,7 +1,7 @@
-
+package dishes;
 
 public class Dish {
-//    Create a class called Dish. This class will represent various restaurant dishes.
+//    Create a class called dishes.Dish. This class will represent various restaurant dishes.
 //    Include an integer property called “costInCents”
 //    Include a string property called “nameOfDish”
 //    Include a boolean property called “wouldRecommend”

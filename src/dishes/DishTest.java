@@ -1,18 +1,18 @@
-
+package dishes;
 
 public class DishTest {
-//    Create another class called DishTest
+//    Create another class called dishes.DishTest
 //    Add a main method and inside the method...
-//    1) instantiate a Dish object and assign to a variable called dish1
+//    1) instantiate a dishes.Dish object and assign to a variable called dish1
 //    2) assign creative values for each of the properties
 //    3) test the printSummary() method by invoking it and checking if all instance values are correctly printed
 
-//    Refactor your Dish and DishTest classes...
-//  1) Change all properties in the Dish class to private visibility (printSummary should remain public)
+//    Refactor your dishes.Dish and dishes.DishTest classes...
+//  1) Change all properties in the dishes.Dish class to private visibility (printSummary should remain public)
 //  2) Add getters and setters for these properties (write them manually then erase them and use IntelliJ to write them quickly)
-//  3) Refactor code as needed in DishTest to access and modify dish object property values
-//  4) Add a constructor method to Dish that will assign all properties
-//  5) Refactor DishTest again to use the constructor to set all property values rather than setter methods
+//  3) Refactor code as needed in dishes.DishTest to access and modify dish object property values
+//  4) Add a constructor method to dishes.Dish that will assign all properties
+//  5) Refactor dishes.DishTest again to use the constructor to set all property values rather than setter methods
     public static void main(String[] args){
         Dish dish1 = new Dish(99, "pansit", true);
         dish1.printSummary();
