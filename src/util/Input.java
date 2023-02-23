@@ -34,7 +34,18 @@ public class Input {
         return value;
     }
     int getInt(){
-        return scan.nextInt();
+        String s;
+        int number = 0;
+
+        try {
+            System.out.println("Enter an int");
+            s = scan.next();
+            number = Integer.parseInt(s);
+        }catch (Exception e){
+            System.out.println("Not an Int");
+            return -1;
+        }
+        return number;
     }
     public int getInt(String prompt){
         System.out.println(prompt);
@@ -62,8 +73,18 @@ public class Input {
         return value;
     }
     public double getDouble(){
-        return scan.nextDouble();
-    }
+        String s;
+        double number = 0;
+
+        try {
+            System.out.println("Enter an double");
+            s = scan.next();
+            number = Double.parseDouble(s);
+        }catch (Exception e){
+            System.out.println("Not a double");
+            return -1;
+        }
+        return number;    }
 
     public double getDouble(double min, double max, String prompt){
         System.out.println(prompt);
